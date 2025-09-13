@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="footer-section contact-info">
           <h3>Contact Us</h3>
           <p>Email: info@loanawala.com</p>
-          <p>Phone: +1 (123) 456-7890</p>
-          <p>Address: 123 Education Lane, Global City, GC 12345</p>
+          <p>Phone: +91 9999999999</p>
+          <p>Address: # 309, Everest Block, Ameerpet, Hyderabad, Telangana, India</p>
         </div>
       </div>
       <div className="footer-bottom text-center">

@@ -1,6 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    contactNumber: '',
+    query: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log('Form Data Submitted:', formData);
+
+    // IMPORTANT: Client-side JavaScript cannot directly send emails.
+    // You will need a backend service or a third-party email service to send this data.
+    // Examples of services: EmailJS, Formspree, Netlify Forms, or a custom Node.js/Python backend.
+    alert('Thank you for your message! We will get back to you soon. (Email sending functionality needs to be integrated on the server-side.)');
+
+    // Placeholder for actual email sending logic:
+    /*
+    try {
+      const response = await fetch('YOUR_BACKEND_EMAIL_ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        setFormData({ name: '', contactNumber: '', query: '' }); // Clear form
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('An error occurred. Please try again later.');
+    }
+    */
+  };
+
   return (
     <div className="contact-page">
       <section className="hero-contact bg-primary text-center section-padding">
@@ -22,22 +65,18 @@ const Contact = () => {
           </div>
           <div className="contact-form">
             <h2>Send Us a Message</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <label htmlFor="contactNumber">Contact Number</label>
+                <input type="tel" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />
               </div>
               <div className="form-group">
-                <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label htmlFor="query">Your Query</label>
+                <textarea id="query" name="query" rows="5" value={formData.query} onChange={handleChange} required></textarea>
               </div>
               <button type="submit" className="btn">Send Message</button>
             </form>
