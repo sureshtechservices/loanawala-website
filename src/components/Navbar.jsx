@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../public/images/loanawala_logo.png'; // Import the logo directly
 import './Navbar.css'; // We'll create this CSS file next
 
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src="/images/loanawala_logo.png" alt="Loanawala Consultancy Logo" className="site-logo" />
+          <img src={logo} alt="Loanawala Consultancy Logo" className="site-logo" />
         </Link>
         <ul className="nav-menu">
           <li className="nav-item">
