@@ -48,6 +48,6 @@
 
 .nav-links:hover,
 .nav-links.active { /* Added active state for current page */
-  background-color: #F0704E; /* Lighter shade of the new primary color */
+  background-color: #E07157; /* Lighter, muted shade of primary color */
   color: white;
 }

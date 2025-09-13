@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #E45A31; /* Dull red-orange */
+  --primary-color: #D25E3F; /* More subdued red-orange */
   --secondary-color: #FFF8E1; /* Very light yellow/cream */
   --text-color: #333333;
-  --header-color: #B3442A; /* Slightly darker dull red-orange for headers */
+  --header-color: #A04A30; /* Darker, muted red-orange for headers */
   --accent-color: #FFD700; /* Bright yellow (Gold) for call to actions */
 }
 
