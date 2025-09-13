@@ -188,6 +188,36 @@ img {
   box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
 }
 
+.country-code-input {
+  display: flex;
+  gap: 10px;
+}
+
+.country-code-select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.tel-input {
+  flex: 1; /* Allow the phone number input to take remaining space */
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.country-code-select:focus,
+.tel-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .container {

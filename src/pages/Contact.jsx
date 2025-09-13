@@ -3,9 +3,18 @@ import React, { useState } from 'react';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
+    countryCode: '+91', // Default to India
     contactNumber: '',
     query: '',
   });
+
+  const countryCodes = [
+    { name: 'India', code: '+91' },
+    { name: 'United States', code: '+1' },
+    { name: 'Canada', code: '+1' },
+    { name: 'United Kingdom', code: '+44' },
+    // Add more countries and codes as needed
+  ];
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,7 +22,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', formData);
+    const fullContactNumber = formData.countryCode + formData.contactNumber;
+    console.log('Form Data Submitted:', { ...formData, contactNumber: fullContactNumber });
 
     // IMPORTANT: Client-side JavaScript cannot directly send emails.
     // You will need a backend service or a third-party email service to send this data.
@@ -28,12 +38,12 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, contactNumber: fullContactNumber }),
       });
 
       if (response.ok) {
         alert('Message sent successfully!');
-        setFormData({ name: '', contactNumber: '', query: '' }); // Clear form
+        setFormData({ name: '', countryCode: '+91', contactNumber: '', query: '' }); // Clear form and reset country code
       } else {
         alert('Failed to send message. Please try again later.');
       }
@@ -57,10 +67,10 @@ const Contact = () => {
         <div className="container grid-2-col">
           <div className="contact-details">
             <h2>Contact Information</h2>
-            <p><strong>Email:</strong> info@loanawalaconsultancy.com</p>
-            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-            <p><strong>Address:</strong> 123 Education Lane, Global City, GC 12345</p>
-            <p><strong>Business Hours:</strong> Mon-Fri: 9:00 AM - 5:00 PM</p>
+            <p><strong>Email:</strong> info@loanawala.com</p>
+            <p><strong>Phone:</strong> +91 9999999999</p>
+            <p><strong>Address:</strong> # 309, Everest Block, Ameerpet, Hyderabad, Telangana, India</p>
+            <p><strong>Business Hours:</strong> Mon-Fri: 10:00 AM - 8:00 PM</p>
             <img src="/images/contact_info.jpg" alt="Contact Information" />
           </div>
           <div className="contact-form">
@@ -72,7 +82,16 @@ const Contact = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="contactNumber">Contact Number</label>
-                <input type="tel" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required />
+                <div className="country-code-input">
+                  <select name="countryCode" id="countryCode" value={formData.countryCode} onChange={handleChange} className="country-code-select">
+                    {countryCodes.map((country) => (
+                      <option key={country.code} value={country.code}>
+                        {country.name} ({country.code})
+                      </option>
+                    ))}
+                  </select>
+                  <input type="tel" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleChange} required className="tel-input" />
+                </div>
               </div>
               <div className="form-group">
                 <label htmlFor="query">Your Query</label>
