@@ -58,30 +58,30 @@ const Contact = () => {
     <div className="contact-page">
       <section className="hero-contact bg-primary text-center section-padding">
         <div className="container">
-          <h1>Get in Touch with Us</h1>
-          <p className="lead">We're here to help you achieve your global education dreams.</p>
+          <h1>Get in Touch with Loanawala Consultancy</h1>
+          <p className="lead">We're here to help you achieve your global education dreams. Reach out to us for expert guidance and support.</p>
         </div>
       </section>
 
       <section className="contact-info section-padding">
         <div className="container grid-2-col">
           <div className="contact-details">
-            <h2>Contact Information</h2>
+            <h2>Our Contact Information</h2>
             <p><strong>Email:</strong> info@loanawala.com</p>
-            <p><strong>Phone:</strong> +91 9999999999</p>
-            <p><strong>Address:</strong> # 309, Everest Block, Ameerpet, Hyderabad, Telangana, India</p>
-            <p><strong>Business Hours:</strong> Mon-Fri: 10:00 AM - 8:00 PM</p>
-            <img src="/images/contact_info.jpg" alt="Contact Information" />
+            <p><strong>Phone:</strong> +91 9985822234 / +91 8008721557</p>
+            <p><strong>Corporate Office:</strong> # HIG-A19, 3rd Floor, Sriman Arcade, above Karur Vysya Bank, Opp. Sunridge Hospital, Reliance Trends Road, A.S. Rao Nagar, Hyderabad, Telangana 500062, India</p>
+            <p><strong>Business Hours:</strong> Mon-Fri: 10:00 AM - 8:00 PM (IST)</p>
+            <img src="/images/contact_office.jpg" alt="Contact Information" />
           </div>
           <div className="contact-form">
             <h2>Send Us a Message</h2>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Your Full Name</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
               </div>
               <div className="form-group">
-                <label htmlFor="contactNumber">Contact Number</label>
+                <label htmlFor="contactNumber">Your Contact Number</label>
                 <div className="country-code-input">
                   <select name="countryCode" id="countryCode" value={formData.countryCode} onChange={handleChange} className="country-code-select">
                     {countryCodes.map((country) => (
@@ -94,10 +94,10 @@ const Contact = () => {
                 </div>
               </div>
               <div className="form-group">
-                <label htmlFor="query">Your Query</label>
+                <label htmlFor="query">Your Query / Message</label>
                 <textarea id="query" name="query" rows="5" value={formData.query} onChange={handleChange} required></textarea>
               </div>
-              <button type="submit" className="btn">Send Message</button>
+              <button type="submit" className="btn">Submit Your Query</button>
             </form>
             <img src="/images/contact_form.jpg" alt="Send Us a Message" />
           </div>
