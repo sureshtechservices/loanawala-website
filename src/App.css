@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #003366; /* Deep blue, similar to Global Navigators branding */
-  --secondary-color: #f8f9fa; /* Light background */
-  --text-color: #333;
-  --header-color: #003366;
-  --accent-color: #28a745; /* Vibrant green for call to actions */
+  --primary-color: #FF6347; /* Bright reddish-orange (Tomato) */
+  --secondary-color: #FFF8E1; /* Very light yellow/cream */
+  --text-color: #333333;
+  --header-color: #CC3300; /* Deeper red-orange for headers */
+  --accent-color: #FFD700; /* Bright yellow (Gold) for call to actions */
 }
 
 body {
@@ -88,7 +88,7 @@ img {
 }
 
 .btn:hover {
-  background-color: #218838; /* Slightly darker green on hover */
+  background-color: #DAA520; /* Darker shade of gold/yellow on hover */
   text-decoration: none;
 }
 
