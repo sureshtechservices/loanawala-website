@@ -4,6 +4,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer'; // Import the new Footer component
 import './App.css'; // Ensure App.css is imported here for global styles
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer /> {/* Render the Footer component here */}
     </Router>
   );
 }
