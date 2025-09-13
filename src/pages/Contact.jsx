@@ -68,8 +68,8 @@ const Contact = () => {
           <div className="contact-details">
             <h2>Our Contact Information</h2>
             <p><strong>Email:</strong> info@loanawala.com</p>
-            <p><strong>Phone:</strong> +91 9985822234 / +91 8008721557</p>
-            <p><strong>Corporate Office:</strong> # HIG-A19, 3rd Floor, Sriman Arcade, above Karur Vysya Bank, Opp. Sunridge Hospital, Reliance Trends Road, A.S. Rao Nagar, Hyderabad, Telangana 500062, India</p>
+            <p><strong>Phone:</strong> +91 9999999999 / +91 8888888888</p>
+            <p><strong>Corporate Office:</strong> # 309, Everest Block, Ameerpet, Hyderabad, Telangana, India</p>
             <p><strong>Business Hours:</strong> Mon-Fri: 10:00 AM - 8:00 PM (IST)</p>
             <img src="/images/contact_office.jpg" alt="Contact Information" />
           </div>
