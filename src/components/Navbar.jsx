@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src="/images/loanawala_logo.png" alt="Loanawala Consultancy Logo" className="site-logo" />
+          <img src="/images/loanawala_logo.png" alt="Loanawala Logo" className="site-logo" />
         </Link>
         <ul className="nav-menu">
           <li className="nav-item">
