@@ -5,7 +5,7 @@ const About = () => {
     <div className="about-page">
       <section className="hero-about bg-primary text-center section-padding">
         <div className="container">
-          <h1>About Loanawala Consultancy</h1>
+          <h1>About Loanawala </h1>
           <p className="lead">Your trusted partner in making global education accessible.</p>
         </div>
       </section>
@@ -13,7 +13,7 @@ const About = () => {
       <section className="our-mission section-padding">
         <div className="container text-center">
           <h2>Our Mission</h2>
-          <p>At Loanawala Consultancy, our mission is to empower aspiring students by providing unparalleled guidance and financial solutions for their overseas education. We believe that financial constraints should never hinder a student's potential.</p>
+          <p>At Loanawala, our mission is to empower aspiring students by providing unparalleled guidance and financial solutions for their overseas education. We believe that financial constraints should never hinder a student's potential.</p>
           <img src="/images/about_mission.jpg" alt="Our Mission" />
         </div>
       </section>

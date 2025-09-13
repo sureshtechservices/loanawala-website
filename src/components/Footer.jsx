@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer bg-primary section-padding">
       <div className="container footer-content">
         <div className="footer-section about-us">
-          <h3>Loanawala Consultancy</h3>
+          <h3>loanAwala </h3>
           <p>Your partner in achieving your abroad education dreams with comprehensive financial assistance.</p>
         </div>
         <div className="footer-section quick-links">
@@ -21,13 +21,13 @@ const Footer = () => {
         </div>
         <div className="footer-section contact-info">
           <h3>Contact Us</h3>
-          <p>Email: info@loanawalaconsultancy.com</p>
+          <p>Email: info@loanawala.com</p>
           <p>Phone: +1 (123) 456-7890</p>
           <p>Address: 123 Education Lane, Global City, GC 12345</p>
         </div>
       </div>
       <div className="footer-bottom text-center">
-        <p>&copy; 2025 Loanawala Consultancy. All rights reserved.</p>
+        <p>&copy; 2025 Loanawala. All rights reserved.</p>
       </div>
     </footer>
   );
