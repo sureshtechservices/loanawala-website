@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #0056b3; /* A shade of blue for branding */
+  --primary-color: #003366; /* Deep blue, similar to Global Navigators branding */
   --secondary-color: #f8f9fa; /* Light background */
   --text-color: #333;
   --header-color: #003366;
-  --accent-color: #28a745; /* Green for call to actions */
+  --accent-color: #28a745; /* Vibrant green for call to actions */
 }
 
 body {
@@ -19,15 +19,15 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure full viewport height */
+  min-height: 100vh;
 }
 
 .container {
-  flex: 1; /* Allows container to grow and push footer down */
+  flex: 1;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%; /* Ensure it takes full width within max-width */
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -84,7 +84,7 @@ img {
   text-decoration: none;
   transition: background-color 0.3s ease;
   font-weight: bold;
-  margin-top: 20px; /* Added margin for spacing */
+  margin-top: 20px;
 }
 
 .btn:hover {
@@ -210,7 +210,7 @@ img {
   .grid-3-col,
   .footer-content,
   .values-grid {
-    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
