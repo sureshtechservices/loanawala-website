@@ -21,6 +21,11 @@
   letter-spacing: 0.5px;
 }
 
+.site-logo {
+  height: 40px; /* Adjust height as needed */
+  width: auto;
+}
+
 .nav-menu {
   list-style: none;
   display: flex;
@@ -43,6 +48,6 @@
 
 .nav-links:hover,
 .nav-links.active { /* Added active state for current page */
-  background-color: #FF826A; /* Lighter shade of primary color (Reddish-orange) */
+  background-color: #F0704E; /* Lighter shade of the new primary color */
   color: white;
 }
